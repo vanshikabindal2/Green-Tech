@@ -1,0 +1,553 @@
+
+/* =====================================
+   GREEN TECH ABOUT SECTION
+===================================== */
+
+.gt-about {
+  width: 100%;
+  padding: 85px 25px 100px;
+  background: #f7faf6;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.gt-about-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* SECTION HEADING */
+
+.gt-about-heading {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.gt-about-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 23px;
+  background: #e3f4e4;
+  color: #65a66b;
+  border: 1px solid #d3ebd5;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.gt-about-label svg {
+  font-size: 18px;
+}
+
+.gt-about-heading h1 {
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 850;
+  color: #18271f;
+  letter-spacing: -1.5px;
+  margin: 0 0 15px;
+}
+
+.gt-about-heading h1 span {
+  color: #75b47b;
+}
+
+.gt-about-heading > p {
+  color: #65736a;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gt-heading-line {
+  width: 65px;
+  height: 4px;
+  background: #7dbb80;
+  border-radius: 10px;
+  margin: 23px auto 0;
+}
+
+/* MAIN GRID */
+
+.gt-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  gap: 75px;
+}
+
+/* LEFT SECTION */
+
+.gt-about-left {
+  width: 100%;
+}
+
+/* EXPERIENCE CARD */
+
+.gt-experience-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  width: fit-content;
+  padding: 20px 27px;
+  margin-bottom: 30px;
+
+  background: #ffffff;
+  border: 1px solid #e4eee3;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 35px rgba(36, 83, 43, 0.07);
+  transition: 0.3s ease;
+}
+
+.gt-experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(36, 83, 43, 0.12);
+}
+
+.gt-experience-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f5e7;
+  color: #70b276;
+  font-size: 26px;
+}
+
+.gt-experience-card h2 {
+  margin: 0;
+  color: #79b77e;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.gt-experience-card h4 {
+  color: #1b2920;
+  font-size: 15px;
+  margin: 2px 0 4px;
+}
+
+.gt-experience-card p {
+  color: #829087;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* DESCRIPTION */
+
+.gt-about-description {
+  margin-bottom: 27px;
+}
+
+.gt-about-description p {
+  color: #1b1f1d;
+  font-size: 15.5px;
+  line-height: 1.9;
+  font-weight: 400;
+  margin: 0 0 17px;
+  text-align: left;
+}
+
+/* FEATURES */
+
+.gt-about-features {
+  padding-top: 23px;
+  border-top: 1px solid #dce9dc;
+}
+
+.gt-about-features h3 {
+  color: #1d3023;
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 23px;
+}
+
+.gt-about-features h3 span {
+  color: #75b47b;
+}
+
+.gt-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 15px;
+}
+
+.gt-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.gt-feature-check {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  background: #7db77e;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.gt-feature-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #48584d;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+
+.gt-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 16px 24px;
+  margin-top: 32px;
+
+  color: #ffffff;
+  background: #79b77e;
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.gt-about-button svg {
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+.gt-about-button:hover {
+  background: #559c60;
+  transform: translateY(-3px);
+}
+
+.gt-about-button:hover svg {
+  transform: translateX(5px);
+}
+
+/* =====================================
+   RIGHT IMAGE SECTION
+===================================== */
+
+.gt-about-right {
+  position: relative;
+  width: 100%;
+  padding: 25px 15px 45px 0;
+}
+
+/* MAIN IMAGE */
+
+.gt-about-image-main {
+  width: 100%;
+  height: 490px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  z-index: 2;
+
+  box-shadow: 0 20px 45px rgba(20, 48, 28, 0.15);
+}
+
+.gt-about-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.gt-about-image-main:hover img {
+  transform: scale(1.06);
+}
+
+/* IMAGE OVERLAY */
+
+.gt-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 65px 25px 25px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 25, 15, 0.85),
+    transparent
+  );
+}
+
+.gt-image-overlay span {
+  color: #a6d9a5;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.gt-image-overlay h3 {
+  color: white;
+  font-size: 23px;
+  margin: 9px 0 0;
+}
+
+/* SMALL IMAGE */
+
+.gt-about-image-small {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+
+  width: 165px;
+  height: 160px;
+
+  border: 6px solid #ffffff;
+  border-radius: 17px;
+
+  overflow: hidden;
+  z-index: 4;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gt-about-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FLOATING EXPERIENCE */
+
+.gt-image-experience {
+  position: absolute;
+  top: 55px;
+  left: -45px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 20px;
+
+  background: #ffffff;
+  border: 1px solid #e5eee3;
+  border-radius: 13px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.gt-image-experience > svg {
+  font-size: 27px;
+  color: #79b77e;
+}
+
+.gt-image-experience div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gt-image-experience strong {
+  color: #263d2b;
+  font-size: 22px;
+}
+
+.gt-image-experience span {
+  color: #7b897e;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* DECORATIVE CIRCLE */
+
+.gt-about-circle {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+
+  top: -10px;
+  right: -40px;
+
+  background: #e3f1e2;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .gt-about {
+    padding: 70px 25px;
+  }
+
+  .gt-about-grid {
+    gap: 45px;
+  }
+
+  .gt-about-image-main {
+    height: 430px;
+  }
+
+  .gt-image-experience {
+    left: -20px;
+  }
+
+  .gt-feature-grid {
+    gap: 15px 10px;
+  }
+
+  .gt-feature-item p {
+    font-size: 13px;
+  }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .gt-about {
+    padding: 55px 18px 65px;
+  }
+
+  .gt-about-heading {
+    margin-bottom: 45px;
+  }
+
+  .gt-about-heading h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .gt-about-heading > p {
+    font-size: 14px;
+  }
+
+  .gt-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gt-about-left {
+    order: 2;
+  }
+
+  .gt-about-right {
+    order: 1;
+    padding: 15px 10px 35px 0;
+  }
+
+  .gt-about-image-main {
+    height: 370px;
+    border-radius: 16px;
+  }
+
+  .gt-about-image-small {
+    width: 115px;
+    height: 115px;
+    right: -5px;
+    bottom: 0;
+    border-width: 4px;
+  }
+
+  .gt-image-experience {
+    top: 35px;
+    left: -5px;
+    padding: 11px 14px;
+  }
+
+  .gt-image-experience strong {
+    font-size: 19px;
+  }
+
+  .gt-about-circle {
+    width: 110px;
+    height: 110px;
+    right: -10px;
+  }
+
+  .gt-experience-card {
+    padding: 17px 20px;
+  }
+
+  .gt-about-description p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .gt-about-features h3 {
+    font-size: 19px;
+  }
+
+  .gt-feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 10px;
+  }
+
+  .gt-feature-item {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .gt-feature-item p {
+    font-size: 12px;
+  }
+
+  .gt-feature-check {
+    width: 21px;
+    height: 21px;
+    min-width: 21px;
+    font-size: 12px;
+  }
+
+  .gt-about-button {
+    width: 100%;
+    margin-top: 27px;
+  }
+
+  .gt-image-overlay h3 {
+    font-size: 18px;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+  .gt-about-heading h1 {
+    font-size: 29px;
+  }
+
+  .gt-about-image-main {
+    height: 310px;
+  }
+
+  .gt-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

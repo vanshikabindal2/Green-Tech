@@ -1,0 +1,711 @@
+/* =====================================
+   GREEN TECH HERO SLIDER
+===================================== */
+
+.green-hero {
+  width: 100%;
+  height: 680px;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: #071b16;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+
+.green-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.green-hero-slide {
+  position: absolute;
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transform: scale(1.04);
+
+  transition:
+    opacity 1.2s ease,
+    transform 5s ease;
+}
+
+.green-hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* DARK OVERLAY */
+
+.green-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 15, 12, 0.78) 0%,
+    rgba(0, 30, 21, 0.55) 50%,
+    rgba(0, 20, 14, 0.35) 100%
+  );
+}
+
+/* HERO CONTENT */
+
+.green-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+  padding: 95px 20px 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  animation: greenContent 0.8s ease;
+}
+
+@keyframes greenContent {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TAG */
+
+.green-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 23px;
+
+  border-radius: 50px;
+
+  background: #e0f6df;
+  color: #79b77e;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  margin-bottom: 35px;
+}
+
+.green-hero-tag span {
+  font-size: 18px;
+}
+
+/* HEADING */
+
+.green-hero-content h1 {
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(48px, 5.5vw, 76px);
+  line-height: 1.35;
+
+  font-weight: 900;
+  letter-spacing: -2px;
+
+  margin: 0;
+
+  color: #ffffff;
+}
+
+.green-hero-content h1 span {
+  color: #00a875;
+}
+
+/* DESCRIPTION */
+
+.green-hero-content p {
+  max-width: 610px;
+
+  font-size: 24px;
+  line-height: 1.75;
+
+  font-weight: 600;
+  color: #ffffff;
+
+  margin: 23px 0 30px;
+}
+
+/* BUTTONS */
+
+.green-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+
+.green-explore-btn,
+.green-consult-btn {
+  min-height: 63px;
+  padding: 0 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.green-explore-btn {
+  background: #80b980;
+  color: #ffffff;
+}
+
+.green-explore-btn:hover {
+  background: #62a667;
+  transform: translateY(-4px);
+}
+
+.green-explore-btn svg {
+  font-size: 21px;
+}
+
+.green-consult-btn {
+  border: 2px solid #9bc89b;
+  color: #8ec48e;
+  background: rgba(0, 20, 14, 0.25);
+}
+
+.green-consult-btn:hover {
+  background: #80b980;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+/* =====================================
+   BOTTOM SECTION
+===================================== */
+
+.green-hero-bottom {
+  position: absolute;
+  z-index: 3;
+
+  bottom: 45px;
+  left: 0;
+
+  width: 100%;
+  padding: 0 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STATISTICS */
+
+.green-hero-stats {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 55px;
+
+  text-align: center;
+}
+
+.green-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.green-stat h2 {
+  margin: 0;
+
+  color: #83c487;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.green-stat span {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* SCROLL INDICATOR */
+
+.green-scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: -45px;
+
+  width: 23px;
+  height: 40px;
+
+  border: 2px solid #82bd86;
+  border-radius: 20px;
+
+  transform: translateX(-50%);
+}
+
+.green-scroll-indicator span {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+
+  width: 3px;
+  height: 8px;
+
+  background: #82bd86;
+  border-radius: 5px;
+
+  animation: greenScroll 1.5s infinite;
+}
+
+@keyframes greenScroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(13px);
+    opacity: 0;
+  }
+}
+
+/* FEATURED */
+
+.green-featured {
+  position: absolute;
+  right: 55px;
+  bottom: 5px;
+
+  text-align: right;
+}
+
+.green-featured small {
+  display: block;
+
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.green-featured h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =====================================
+   SLIDER ARROWS
+===================================== */
+
+.green-slider-controls {
+  position: absolute;
+  z-index: 5;
+
+  right: 45px;
+  bottom: 30px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.green-slider-controls button {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+
+  font-size: 25px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.green-slider-controls button:hover {
+  background: #80b980;
+  border-color: #80b980;
+}
+
+/* DOTS */
+
+.green-slider-dots {
+  position: absolute;
+  z-index: 5;
+
+  left: 50%;
+  bottom: 15px;
+
+  display: flex;
+  gap: 8px;
+
+  transform: translateX(-50%);
+}
+
+.green-slider-dots button {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.green-slider-dots button.active {
+  width: 25px;
+  background: #83c487;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .green-hero {
+    height: 650px;
+  }
+
+  .green-hero-content {
+    padding-top: 100px;
+  }
+
+  .green-hero-content h1 {
+    font-size: 60px;
+  }
+
+  .green-hero-content p {
+    font-size: 20px;
+  }
+
+  .green-hero-stats {
+    gap: 35px;
+  }
+
+  .green-stat h2 {
+    font-size: 40px;
+  }
+
+  .green-featured {
+    right: 25px;
+  }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .green-hero {
+    height: 680px;
+    min-height: 600px;
+  }
+
+  .green-hero-slide {
+    background-position: center;
+  }
+
+  .green-hero-overlay {
+    background: rgba(0, 20, 14, 0.67);
+  }
+
+  .green-hero-content {
+    padding: 75px 17px 0;
+  }
+
+  .green-hero-tag {
+    font-size: 11px;
+    padding: 11px 15px;
+    margin-bottom: 28px;
+  }
+
+  .green-hero-content h1 {
+    font-size: 39px;
+    line-height: 1.4;
+    letter-spacing: -1px;
+  }
+
+  .green-hero-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 20px 0 25px;
+  }
+
+  .green-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .green-explore-btn,
+  .green-consult-btn {
+    width: 80%;
+    min-height: 52px;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .green-hero-bottom {
+    bottom: 80px;
+    padding: 0 10px;
+  }
+
+  .green-hero-stats {
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .green-stat h2 {
+    font-size: 30px;
+  }
+
+  .green-stat span {
+    font-size: 11px;
+  }
+
+  .green-scroll-indicator {
+    display: none;
+  }
+
+  .green-featured {
+    display: none;
+  }
+
+  .green-slider-controls {
+    right: 15px;
+    bottom: 17px;
+  }
+
+  .green-slider-controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
+  }
+
+  .green-slider-dots {
+    left: 20px;
+    bottom: 32px;
+    transform: none;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+  .green-hero-content h1 {
+    font-size: 33px;
+  }
+
+  .green-hero-content p {
+    font-size: 14px;
+  }
+
+  .green-hero-stats {
+    gap: 12px;
+  }
+
+  .green-stat h2 {
+    font-size: 26px;
+  }
+
+}
+
+/* ===================================
+   FINAL HERO SLIDER FIX
+=================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.green-hero {
+  width: 100%;
+  height: 760px;
+  min-height: 760px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* HERO CONTENT SPACING */
+
+.green-hero-content {
+  padding-top: 75px;
+  max-width: 1000px;
+}
+
+.green-hero-tag {
+  margin-bottom: 22px;
+}
+
+.green-hero-content h1 {
+  font-size: clamp(48px, 5vw, 68px);
+  line-height: 1.25;
+}
+
+.green-hero-content p {
+  font-size: 21px;
+  line-height: 1.6;
+  margin: 18px 0 23px;
+}
+
+/* BUTTONS */
+
+.green-explore-btn,
+.green-consult-btn {
+  min-height: 58px;
+}
+
+/* BOTTOM STATISTICS */
+
+.green-hero-bottom {
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  padding: 0 35px;
+}
+
+.green-hero-stats {
+  position: relative;
+  gap: 55px;
+}
+
+.green-stat h2 {
+  font-size: 46px;
+}
+
+/* FEATURED INSTALLATION */
+
+.green-featured {
+  right: 145px;
+  bottom: 0;
+  max-width: 300px;
+  text-align: right;
+}
+
+.green-featured h3 {
+  font-size: 22px;
+  white-space: normal;
+}
+
+/* ARROWS */
+
+.green-slider-controls {
+  right: 30px;
+  bottom: 35px;
+}
+
+/* DOTS */
+
+.green-slider-dots {
+  bottom: 15px;
+}
+
+/* SCROLL ICON */
+
+.green-scroll-indicator {
+  bottom: -42px;
+}
+
+/* ===================================
+   MOBILE FIX
+=================================== */
+
+@media (max-width: 600px) {
+
+  .green-hero {
+    height: 720px;
+    min-height: 720px;
+  }
+
+  .green-hero-content {
+    padding: 65px 15px 0;
+  }
+
+  .green-hero-content h1 {
+    font-size: 36px;
+    line-height: 1.35;
+  }
+
+  .green-hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .green-hero-bottom {
+    bottom: 85px;
+    padding: 0 10px;
+  }
+
+  .green-hero-stats {
+    gap: 15px;
+  }
+
+  .green-stat h2 {
+    font-size: 28px;
+  }
+
+  .green-featured {
+    display: none;
+  }
+
+  .green-slider-controls {
+    right: 15px;
+    bottom: 20px;
+  }
+
+}

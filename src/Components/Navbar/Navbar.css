@@ -1,0 +1,344 @@
+/* ==============================
+   GREEN TECH NAVBAR
+============================== */
+
+.green-header {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+/* TOP HEADER */
+
+.green-header-top {
+  max-width: 1340px;
+  min-height: 112px;
+  margin: auto;
+  padding: 12px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* COMPANY */
+
+.green-company {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.green-logo {
+  width: 68px;
+  height: 78px;
+  flex-shrink: 0;
+  background: #f8f8f8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.green-company-info h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #172033;
+  margin: 0 0 8px;
+}
+
+.green-company-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.green-company-details span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 13px;
+  color: #536176;
+  font-weight: 500;
+}
+
+.green-company-details svg {
+  color: #79b77c;
+  font-size: 15px;
+  stroke-width: 3;
+}
+
+/* CONTACT BUTTONS */
+
+.green-header-contact {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.green-call-btn {
+  min-width: 116px;
+  height: 48px;
+  padding: 5px 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  color: #172033;
+  text-decoration: none;
+
+  border: 1px solid #cbd2dc;
+  border-radius: 5px;
+  background: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+.green-call-btn svg {
+  color: #79b77c;
+  font-size: 16px;
+  fill: #79b77c;
+}
+
+.green-call-btn div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.green-call-btn strong {
+  font-size: 14px;
+}
+
+.green-call-btn small {
+  font-size: 10px;
+  color: #687386;
+}
+
+.green-call-btn:hover {
+  border-color: #79b77c;
+  background: #f5faf5;
+}
+
+.green-email-btn {
+  height: 45px;
+  min-width: 120px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  color: white;
+  background: #7db77e;
+
+  border-radius: 5px;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+
+.green-email-btn svg {
+  font-size: 16px;
+  fill: white;
+}
+
+.green-email-btn:hover {
+  background: #5f9e62;
+  transform: translateY(-2px);
+}
+
+/* NAVIGATION */
+
+.green-navigation {
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+}
+
+.green-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.green-nav-links a {
+  text-decoration: none;
+  color: #303c50;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.green-nav-links a:hover {
+  color: #65a96b;
+}
+
+.green-nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #79b77c;
+  transition: width 0.3s ease;
+}
+
+.green-nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+  .green-header-top {
+    padding: 12px 20px;
+  }
+
+  .green-company-info h2 {
+    font-size: 16px;
+  }
+
+  .green-company-details {
+    gap: 8px;
+  }
+
+  .green-company-details span {
+    font-size: 11px;
+  }
+
+  .green-nav-links {
+    gap: 30px;
+  }
+
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+
+  .green-header-top {
+    padding: 12px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .green-company {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .green-logo {
+    width: 55px;
+    height: 60px;
+  }
+
+  .green-company-info {
+    min-width: 0;
+  }
+
+  .green-company-info h2 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .green-company-details {
+    gap: 5px 12px;
+  }
+
+  .green-company-details span {
+    font-size: 10px;
+  }
+
+  .green-header-contact {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .green-call-btn {
+    height: 42px;
+    min-width: 110px;
+  }
+
+  .green-email-btn {
+    height: 42px;
+    min-width: 105px;
+  }
+
+  .green-navigation {
+    height: auto;
+    padding: 14px 10px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .green-nav-links {
+    width: max-content;
+    gap: 25px;
+    padding: 0 5px;
+  }
+
+  .green-nav-links a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+  .green-company-info h2 {
+    font-size: 13px;
+  }
+
+  .green-company-details span {
+    font-size: 9px;
+  }
+
+  .green-nav-links {
+    gap: 20px;
+  }
+
+}
