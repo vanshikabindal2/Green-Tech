@@ -1,22 +1,31 @@
-/* ==============================
+
+/* =========================================
    GREEN TECH NAVBAR
-============================== */
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
 
 .green-header {
   width: 100%;
   background: #ffffff;
-  position: relative;
-  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* TOP HEADER */
 
 .green-header-top {
+  width: 100%;
   max-width: 1340px;
   min-height: 112px;
   margin: auto;
-  padding: 12px 0;
+  padding: 12px 20px;
 
   display: flex;
   align-items: center;
@@ -70,7 +79,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-
   font-size: 13px;
   color: #536176;
   font-weight: 500;
@@ -88,6 +96,7 @@
   display: flex;
   align-items: center;
   gap: 13px;
+  flex-shrink: 0;
 }
 
 .green-call-btn {
@@ -102,18 +111,15 @@
 
   color: #172033;
   text-decoration: none;
-
   border: 1px solid #cbd2dc;
   border-radius: 5px;
   background: #ffffff;
-
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .green-call-btn svg {
   color: #79b77c;
   font-size: 16px;
-  fill: #79b77c;
 }
 
 .green-call-btn div {
@@ -146,22 +152,18 @@
   justify-content: center;
   gap: 9px;
 
-  color: white;
+  color: #ffffff;
   background: #7db77e;
-
   border-radius: 5px;
   text-decoration: none;
-
   font-size: 15px;
   font-weight: 700;
 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .green-email-btn svg {
   font-size: 16px;
-  fill: white;
 }
 
 .green-email-btn:hover {
@@ -169,11 +171,27 @@
   transform: translateY(-2px);
 }
 
+/* HAMBURGER BUTTON */
+
+.green-menu-btn {
+  display: none;
+  border: none;
+  background: #79b77c;
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
 /* NAVIGATION */
 
 .green-navigation {
   width: 100%;
-  height: 48px;
+  min-height: 48px;
 
   display: flex;
   align-items: center;
@@ -192,12 +210,11 @@
 .green-nav-links a {
   text-decoration: none;
   color: #303c50;
-
   font-size: 15px;
   font-weight: 700;
-
   transition: color 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .green-nav-links a:hover {
@@ -209,10 +226,8 @@
   position: absolute;
   left: 0;
   bottom: -7px;
-
   width: 0;
   height: 2px;
-
   background: #79b77c;
   transition: width 0.3s ease;
 }
@@ -221,14 +236,22 @@
   width: 100%;
 }
 
-/* ==============================
-   TABLET RESPONSIVE
-============================== */
+/* TABLET */
 
 @media (max-width: 900px) {
 
   .green-header-top {
     padding: 12px 20px;
+    gap: 12px;
+  }
+
+  .green-logo {
+    width: 58px;
+    height: 68px;
+  }
+
+  .green-company {
+    gap: 12px;
   }
 
   .green-company-info h2 {
@@ -243,33 +266,45 @@
     font-size: 11px;
   }
 
+  .green-header-contact {
+    gap: 8px;
+  }
+
+  .green-call-btn {
+    min-width: 105px;
+  }
+
+  .green-email-btn {
+    min-width: 105px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
   .green-nav-links {
     gap: 30px;
   }
-
 }
 
-/* ==============================
-   MOBILE RESPONSIVE
-============================== */
+/* MOBILE MENU */
 
 @media (max-width: 600px) {
 
   .green-header-top {
-    padding: 12px 15px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 13px;
+    min-height: 90px;
+    padding: 10px 15px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .green-company {
-    width: 100%;
-    gap: 12px;
+    flex: 1;
+    min-width: 0;
+    gap: 10px;
   }
 
   .green-logo {
-    width: 55px;
-    height: 60px;
+    width: 48px;
+    height: 55px;
   }
 
   .green-company-info {
@@ -277,52 +312,88 @@
   }
 
   .green-company-info h2 {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.4;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .green-company-details {
-    gap: 5px 12px;
+    gap: 4px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .green-company-details span {
-    font-size: 10px;
+    font-size: 9px;
   }
+
+  /* CONTACT BUTTONS */
 
   .green-header-contact {
-    width: 100%;
-    justify-content: flex-start;
+    display: none;
   }
 
-  .green-call-btn {
-    height: 42px;
-    min-width: 110px;
+  /* MENU ICON */
+
+  .green-menu-btn {
+    display: flex;
+    flex-shrink: 0;
   }
 
-  .green-email-btn {
-    height: 42px;
-    min-width: 105px;
-  }
+  /* MOBILE NAVIGATION */
 
   .green-navigation {
-    height: auto;
-    padding: 14px 10px;
-    overflow-x: auto;
-    justify-content: flex-start;
+    display: none;
+    width: 100%;
+    min-height: auto;
+    padding: 10px 15px 18px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .green-navigation.active {
+    display: block;
+    animation: menuSlide 0.3s ease;
   }
 
   .green-nav-links {
-    width: max-content;
-    gap: 25px;
-    padding: 0 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
 
   .green-nav-links a {
-    font-size: 13px;
-    white-space: nowrap;
+    display: block;
+    padding: 13px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #eeeeee;
   }
 
+  .green-nav-links a::after {
+    display: none;
+  }
+
+  .green-nav-links a:hover {
+    color: #65a96b;
+    background: #f5faf5;
+    padding-left: 16px;
+  }
+}
+
+/* MENU ANIMATION */
+
+@keyframes menuSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* SMALL MOBILE */
@@ -330,15 +401,29 @@
 @media (max-width: 360px) {
 
   .green-company-info h2 {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .green-company-details span {
-    font-size: 9px;
+    font-size: 8px;
   }
 
-  .green-nav-links {
-    gap: 20px;
+  .green-menu-btn {
+    width: 39px;
+    height: 39px;
+    font-size: 22px;
   }
+}
 
+/* PAGE CONTENT SPACING */
+
+body {
+  margin: 0;
+  padding-top: 160px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 90px;
+  }
 }

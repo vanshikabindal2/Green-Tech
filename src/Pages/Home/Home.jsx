@@ -9,6 +9,7 @@ import outdoorwall from "../../assets/outdoorwall.jpg";
 import greenwall from "../../assets/greenwall.jpg";
 import Products from "../Products/Products";
 import Service from "../Service/Service";
+import Gallery from "../Gallery/Gallery";
 const slides = [
   {
     image: indoorwall,
@@ -174,6 +175,7 @@ const Home = () => {
     </section>
     <About/>
     <Products/>
+    <Gallery/>
     <Service/>
     </>
   );

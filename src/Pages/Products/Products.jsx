@@ -10,7 +10,7 @@ import biopanel from "../../assets/biopanel.jpg";
 import artificialgrass from "../../assets/artificialgrass.jpg";
 import terracegarden from "../../assets/terracegarden.jpg";
 import herowall from "../../assets/herowall.jpg";
-import Slider from "../Sliderproduct/slider";
+
 
 const products = [
   {
@@ -142,7 +142,7 @@ const Products = () => {
         </div>
       </section>
 
-      <Slider />
+    
     </>
   );
 };

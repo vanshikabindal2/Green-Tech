@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
-import "./Slider.css";
+import "./Gallery.css";
 
 import outdoorwall from "../../assets/outdoorwall.jpg";
 import indoorwall from "../../assets/indoorwall.jpg";
@@ -48,7 +48,7 @@ const projects = [
   },
 ];
 
-const Slider = () => {
+const Gallery = () => {
   const sliderRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(3);
@@ -180,4 +180,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Gallery;
